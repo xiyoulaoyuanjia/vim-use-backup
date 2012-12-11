@@ -1,0 +1,30 @@
+"NERDTree  插件
+"NERDTree plugin
+let NERDTreeWinPos = "right" "where NERD tree window is placed on the screen
+let NERDTreeWinSize =20 "size of the NERD tree
+nmap <F7> <ESC>:NERDTreeToggle<RETURN>" Open and close the NERD_tree.vim separately
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+
+
+syntax on 
+set filetype=C
+
+set nocp    "关掉兼容模式 
+
+set ru      "打开状态标尺栏
+set number  "显示行号
+syntax on   "打开关键字上色
+
+" c/c++ 
+set sm   "显示括号匹配情况
+
+
+
+
+let &termencoding=&encoding
+set fileencodings=utf-8,gbk
+
+cmap w!! w !sudo tee % >/dev/null
