@@ -6,8 +6,8 @@ vim-use
     * [在当前/后面插入一行](#command_1)
     * [光标跳转到第n行](#command_2)
     * [更改 删除 复制 选中 代码块](#command_3)
-    * [](#command_4)
-    * [](#command_5)
+    * [跳转到与它匹配的括号处](#command_4)
+    * [整体向右移动](#command_5)
 *   [插入模式](#insert)
      * [vim 的自动补全机制](#insert_1)
      * [](#insert_2)
@@ -22,6 +22,7 @@ vim-use
     * [增加tags文件](#lastCommand_7)
     * [与tags文件有关的快捷键](#lastCommand_8)
     * [取消 vim 回车注释的问题](#lastCommand_9)
+    * [整体向右移动](#lastCommand_10)
 
 
 ***
@@ -50,6 +51,11 @@ vim-use
 >**note:** 当前光标在([{ 中
     
     %
+
+<h4 id="command_5">整体向右移动</h4>
+>**note:** 另外table 默认是4个空格  当然可以修改了 方法为 set shiftwidth=3
+
+     7gg4<< 
 
 
 ***
@@ -112,6 +118,9 @@ help formatoptions  可得其解释
 >r     Automatically insert the current comment leader after hitting
         <Enter> in Insert mode.
 
+<h4 id="lastCommand_10">整体向右移动 </h4>
+
+    7,10<
 
 
 
