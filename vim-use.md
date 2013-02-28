@@ -24,6 +24,8 @@ vim-use
     * [与tags文件有关的快捷键](#lastCommand_8)
     * [取消 vim 回车注释的问题](#lastCommand_9)
     * [整体向右移动](#lastCommand_10)
+    * [设置tab键的空格多少几个空格](#lastCommand_11)
+    * [向前与向后查找搜索字符](#lastCommand_12)
 
 
 ***
@@ -127,6 +129,14 @@ help formatoptions  可得其解释
 <h4 id="lastCommand_10">整体向右移动 </h4>
 
     7,10<
+    
+<h4 id="lastCommand_11">设置tab键的空格多少 </h4>
 
+    set ts=4 设置table(ts表示的含义tablestop)键 为4个空格     
 
+<h4 id="lastCommand_12">查找的一些用法 </h4>
+
+    n/N  查找(顺着之前的方向/反着之前的方向)下一个
+    
+    /或者?： 向下/向上 查找 ( 后面接字符串则查找字符串，否则查找刚查找的最后一个字符串)
 
