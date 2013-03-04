@@ -28,3 +28,5 @@ let &termencoding=&encoding
 set fileencodings=utf-8,gbk
 
 cmap w!! w !sudo tee % >/dev/null
+
+set fo+=r " 打开 回车添加注释功能
