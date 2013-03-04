@@ -29,4 +29,7 @@ set fileencodings=utf-8,gbk
 
 cmap w!! w !sudo tee % >/dev/null
 
-set fo+=r " 打开 回车添加注释功能
+set fo+=r " 打开 回车添
+
+set ts=4  " 设置table键的空格为4加注释功能
+
