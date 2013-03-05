@@ -26,6 +26,11 @@ vim-use
     * [整体向右移动](#lastCommand_10)
     * [设置tab键的空格多少几个空格](#lastCommand_11)
     * [向前与向后查找搜索字符](#lastCommand_12)
+    * [如果查看文件编码格式？]#(lastCommand_13) 
+    * [如果修改文件编码格式？]#(lastCommand_14) 
+    *[ 关于vim的寄存器]#(lastCommand_15)
+
+
 
 
 ***
@@ -139,4 +144,25 @@ help formatoptions  可得其解释
     n/N  查找(顺着之前的方向/反着之前的方向)下一个
     
     /或者?： 向下/向上 查找 ( 后面接字符串则查找字符串，否则查找刚查找的最后一个字符串)
+
+<h4 id="lastCommand_13">如何查看文件编码格式? </h4>
+
+    可以借鉴vim 工具。。1.用vim打开文件。2.set encoding
+    
+<h4 id="lastCommand_14">如何修改文件编码格式? </h4> 
+
+     set encoding=utf-8  这样就把文件的编码更改为utf-8 了
+
+<h4 id="lastCommand_15"> 关于vim的寄存器</h4> 
+
+    :reg  显示VIM的寄存器  其中很重要的是 “+  表示系统剪贴板  使用 "+p  表示粘贴内容到VIM时 ，同理使用 "+y 把vim中的内容复制到系统的剪贴板
+
+
+
+
+
+
+
+
+
 
