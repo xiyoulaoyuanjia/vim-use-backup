@@ -26,9 +26,9 @@ vim-use
     * [整体向右移动](#lastCommand_10)
     * [设置tab键的空格多少几个空格](#lastCommand_11)
     * [向前与向后查找搜索字符](#lastCommand_12)
-    * [如果查看文件编码格式？]#(lastCommand_13) 
-    * [如果修改文件编码格式？]#(lastCommand_14) 
-    *[ 关于vim的寄存器]#(lastCommand_15)
+    * [如果查看文件编码格式？](#lastCommand_13) 
+    * [如果修改文件编码格式？](#lastCommand_14) 
+    *[ 关于vim的寄存器](#lastCommand_15)
 
 
 
