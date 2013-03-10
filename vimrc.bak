@@ -33,3 +33,13 @@ set fo+=r " 打开 回车添
 
 set ts=4  " 设置table键的空格为4加注释功能
 
+" 记住上次关闭的位置 因为 fedora 中有这个功能 可以查看 /etc/vimrc   中获得方法。
+" When editing a file, always jump to the last cursor position
+  autocmd BufReadPost *
+  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  \   exe "normal! g'\"" |
+  \ endif
+
+
+
+
