@@ -167,12 +167,11 @@ help formatoptions  可得其解释
 <h4 id="lastCommand_15"> 关于vim的寄存器</h4> 
 
     :reg  显示VIM的寄存器  其中很重要的是 “+  表示系统剪贴板  使用 "+p  表示粘贴内容到VIM时 ，同理使用 "+y 把vim中的内容复制到系统的剪贴板
-     __note: 并不是所有的默认都支持“+ 系统剪贴板 例如 12.10 64 位 ubuntu ___
-     `You first need to see if vim is compiled with clipboard support, run vim --version | grep clip and see if there is a + or - in front of clipboard and xterm-clipboard.
-
+     note: 并不是所有的默认都支持“+ 系统剪贴板 例如 12.10 64 位 ubuntu
+     
+     You first need to see if vim is compiled with clipboard support, run vim --version | grep clip and see if there is a + or - in front of clipboard and xterm-clipboard.
      If it has clipboard support, copying from and pasting into the * or + registers should use the system/X11 clipboards, so "*yy would copy a line and "*p would paste it.
-
-     In Ubuntu 10.10 you can install vim-gnome to have clipboard support compiled in.`
+     In Ubuntu 10.10 you can install vim-gnome to have clipboard support compiled in.
 
 
 
