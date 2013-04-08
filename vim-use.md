@@ -9,6 +9,7 @@ vim-use
     * [跳转到与它匹配的括号处](#command_4)
     * [整体向右移动](#command_5)
     * [多行执行相同的操作例如注释](#command_6)
+    * [关于vim编辑器增加自定义结构体 补全功能](#command_7)
 *   [插入模式](#insert)
      * [vim 的自动补全机制](#insert_1)
      * [关于vim 的 可视模式](#insert_2)
@@ -80,6 +81,21 @@ vim-use
 >**note:** 当然方法很多。这里采取列行模式
 
      1.ctrl+v  2.选择包括的行数 3.I(大写i) 4.插入执行动作例如 "//" 注释符号 5. ESC 键
+
+
+<h4 id="command_7">关于vim编辑器增加自定义结构体 补全功能</h4>
+
+>* ～/.vimrc中增加如下两行：
+
+filetype plugin indent on
+set completeopt=longest,menu
+
+打开文件检测和智能补全，并关闭智能补全时的预览窗口。
+
+>* 在vim中使用方法:
+ 
+光标放到 "->"或者"." 之后 "ctrl+x" 在点击 "ctrl+o" 会弹出一个下拉菜单来..
+
 
 
 ***
