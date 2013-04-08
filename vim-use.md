@@ -10,6 +10,8 @@ vim-use
     * [整体向右移动](#command_5)
     * [多行执行相同的操作例如注释](#command_6)
     * [关于vim编辑器增加自定义结构体 补全功能](#command_7)
+    * [关于VISUAL模式](#command_8)
+   
 *   [插入模式](#insert)
      * [vim 的自动补全机制](#insert_1)
      * [关于vim 的 可视模式](#insert_2)
@@ -30,6 +32,7 @@ vim-use
     * [如果查看文件编码格式？](#lastCommand_13) 
     * [如果修改文件编码格式？](#lastCommand_14) 
     * [关于vim寄存器](#lastCommand_15)
+    * [关于粘帖代码时vim的自动缩进的问题](#lastCommand_16)
 
 
 
@@ -88,13 +91,43 @@ vim-use
 >* ～/.vimrc中增加如下两行：
 
 filetype plugin indent on
+
 set completeopt=longest,menu
 
-打开文件检测和智能补全，并关闭智能补全时的预览窗口。
+      打开文件检测和智能补全，并关闭智能补全时的预览窗口。
 
 >* 在vim中使用方法:
  
-光标放到 "->"或者"." 之后 "ctrl+x" 在点击 "ctrl+o" 会弹出一个下拉菜单来..
+      光标放到 "->"或者"." 之后 "ctrl+x" 在点击 "ctrl+o" 会弹出一个下拉菜单来..
+      
+
+<h4 id="command_8">关于VISUAL模式</h4>
+
+
+      一般而言 VISUAL有3中 分别为:
+      >* VISUAL 模式(v) 
+      
+      这种模式会将光标的开始与结尾的所有字符选择上
+        
+      >* VISUAL BLOCK(ctrl+v) 
+      
+      这种模式是成块成块选择的 光标跳转为对角线方式跳转.
+      
+      常用的是同时更改(编辑,增加,删除 替换)相同的行
+        
+      例如  增加 注释 
+          
+      >>* ctrl+v 选中需要增加的地方..
+      >>* shift+i 变成插入方式
+      >>* 编辑内容(例如写 # 字符)
+      >>* ESC 键  则同步其它行
+      
+      >*  (VISUAL LINE)shift+v
+      
+      这种模式是成行成行选择的.
+      
+      __当然在选中块之后可以进行一些常用的编辑选项.r 是替换的. d 是删除的, y是复制的__
+
 
 
 
@@ -189,7 +222,9 @@ help formatoptions  可得其解释
      If it has clipboard support, copying from and pasting into the * or + registers should use the system/X11 clipboards, so "*yy would copy a line and "*p would paste it.
      In Ubuntu 10.10 you can install vim-gnome to have clipboard support compiled in.
 
+<h4 id="lastCommand_16"> 关于粘帖代码时vim的自动缩进的问题</h4> 
 
+      set paste 命令即可
 
 
 
