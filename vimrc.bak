@@ -1,13 +1,41 @@
+function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
+  let ft=toupper(a:filetype)
+  let group='textGroup'.ft
+  if exists('b:current_syntax')
+    let s:current_syntax=b:current_syntax
+    " Remove current syntax definition, as some syntax files (e.g. cpp.vim)
+    " do nothing if b:current_syntax is defined.
+    unlet b:current_syntax
+  endif
+  execute 'syntax include @'.group.' syntax/'.a:filetype.'.vim'
+  try
+    execute 'syntax include @'.group.' after/syntax/'.a:filetype.'.vim'
+  catch
+  endtry
+  if exists('s:current_syntax')
+    let b:current_syntax=s:current_syntax
+  else
+    unlet b:current_syntax
+  endif
+  execute 'syntax region textSnip'.ft.'
+  \ matchgroup='.a:textSnipHl.'
+  \ start="'.a:start.'" end="'.a:end.'"
+  \ contains=@'.group
+endfunction
+
+au FileType python call TextEnableCodeSnip('sql', "sql = '", "';", 'SpecialComment')
+
 "NERDTree  插件
-"NERDTree plugin
-let NERDTreeWinPos = "right" "where NERD tree window is placed on the screen
-let NERDTreeWinSize =20 "size of the NERD tree
-nmap <F7> <ESC>:NERDTreeToggle<RETURN>" Open and close the NERD_tree.vim separately
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+""NERDTree plugin
+"let NERDTreeWinPos = "right" "where NERD tree window is placed on the screen
+"let NERDTreeWinSize =20 "size of the NERD tree
+"nmap <F7> <ESC>:NERDTreeToggle<RETURN>" Open and close the NERD_tree.vim separately
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
+set fileencodings=utf-8,gbk
 
 syntax on 
 set filetype=C
@@ -15,31 +43,43 @@ set filetype=C
 set nocp    "关掉兼容模式 
 
 set ru      "打开状态标尺栏
-set number  "显示行号
+"set number  "显示行号
 syntax on   "打开关键字上色
 
 " c/c++ 
-set sm   "显示括号匹配情况
+" set sm   "显示括号匹配情况
+"
+"
+"
+"
+" let &termencoding=&encoding
+" set fileencodings=utf-8,gbk
+"
+" cmap w!! w !sudo tee % >/dev/null
+"
+set ts=4  " 设置table键的空格为4
+
+set fo+=r " 打开 回车添加注释功能
+
+filetype plugin indent on
+set completeopt=longest,menu
 
 
-
-
-let &termencoding=&encoding
-set fileencodings=utf-8,gbk
-
-cmap w!! w !sudo tee % >/dev/null
-
-set fo+=r " 打开 回车添
-
-set ts=4  " 设置table键的空格为4加注释功能
-
-" 记住上次关闭的位置 因为 fedora 中有这个功能 可以查看 /etc/vimrc   中获得方法。
-" When editing a file, always jump to the last cursor position
-  autocmd BufReadPost *
+" vim 记住上次退出位置
+autocmd BufReadPost *
   \ if line("'\"") > 0 && line ("'\"") <= line("$") |
   \   exe "normal! g'\"" |
   \ endif
 
 
+"autocmd  BufReadPost,FileReadPost *.py :silent %!/home/yuanjia/PythonTidy.py
+"au FileType python set formatprg=~/pyformat.py 
+"noremap <F11> gggqG
 
 
+
+" Pathogen
+execute pathogen#infect()
+call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+syntax on
+filetype plugin indent on
