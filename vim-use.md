@@ -33,6 +33,7 @@ vim-use
     * [如果修改文件编码格式？](#lastCommand_14) 
     * [关于vim寄存器](#lastCommand_15)
     * [关于粘帖代码时vim的自动缩进的问题](#lastCommand_16)
+    * [命令行搜索 ](#lastCommand_17)
 
 
 
@@ -225,6 +226,12 @@ help formatoptions  可得其解释
 <h4 id="lastCommand_16"> 关于粘帖代码时vim的自动缩进的问题</h4> 
 
       set paste 命令即可
+      
+<h4 id="lastCommand_17"> 搜索底行命令 </h4>
+
+      底行下搜索 可以使用"ctrl+f" 搜索命令
+
+      ![](http://xiyoulaoyuanjia-sendtosaepic.stor.sinaapp.com/Screenshot%20from%202013-05-26%2020:47:15.png)
 
 
 
