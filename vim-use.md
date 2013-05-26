@@ -34,7 +34,7 @@ vim-use
     * [关于vim寄存器](#lastCommand_15)
     * [关于粘帖代码时vim的自动缩进的问题](#lastCommand_16)
     * [命令行搜索 ](#lastCommand_17)
-
+    * [vim 中不区分大小写查找](#lastCommand_18)
 
 
 ***
@@ -233,6 +233,16 @@ help formatoptions  可得其解释
 
 
 ![](http://xiyoulaoyuanjia-sendtosaepic.stor.sinaapp.com/Screenshot%20from%202013-05-26%2020:47:15.png)
+
+
+<h4 id="lastCommand_18"> vim 中不区分大小写查找 </h4>
+
+
+>* set ignorecase(缩写 set ic?)
+>* /gagag\c   不区分大小写查找 gagag 
+
+
+
 
 
 
