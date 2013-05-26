@@ -232,7 +232,7 @@ help formatoptions  可得其解释
       底行下搜索 可以使用"ctrl+f" 搜索命令
 
 
-      ![](http://xiyoulaoyuanjia-sendtosaepic.stor.sinaapp.com/Screenshot%20from%202013-05-26%2020:47:15.png)
+![](http://xiyoulaoyuanjia-sendtosaepic.stor.sinaapp.com/Screenshot%20from%202013-05-26%2020:47:15.png)
 
 
 
