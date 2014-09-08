@@ -11,6 +11,8 @@ vim-use
     * [多行执行相同的操作例如注释](#command_6)
     * [关于vim编辑器增加自定义结构体 补全功能](#command_7)
     * [关于VISUAL模式](#command_8)
+    * [删除当前光标到行末/开头](#command_9)
+
    
 *   [插入模式](#insert)
      * [vim 的自动补全机制](#insert_1)
@@ -128,6 +130,12 @@ set completeopt=longest,menu
       这种模式是成行成行选择的.
       
       __当然在选中块之后可以进行一些常用的编辑选项.r 是替换的. d 是删除的, y是复制的__
+
+<h4 id="command_9">删除当前光标到行末/开头</h4>
+The command 'd w' will delete from the current cursor position to the beginning of 
+the next word character. 
+The command 'd $' will delete from the current cursor position to the end of 
+the current line. 'D' is a synonym for 'd $'.
 
 
 
