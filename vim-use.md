@@ -12,6 +12,8 @@ vim-use
     * [关于vim编辑器增加自定义结构体 补全功能](#command_7)
     * [关于VISUAL模式](#command_8)
     * [删除当前光标到行末/开头](#command_9)
+    * [删除行末的换行符newline](#command_10)
+
 
    
 *   [插入模式](#insert)
@@ -136,6 +138,13 @@ The command 'd w' will delete from the current cursor position to the beginning 
 the next word character. 
 The command 'd $' will delete from the current cursor position to the end of 
 the current line. 'D' is a synonym for 'd $'.
+
+<h4 id="command_10">删除行末的换行符newline</h4>
+删除光标所在行的换行符，可以使用大小的j 'J' 即可！
+If you are on the first line, pressing (upper case) J will 
+join that line and the next line together, removing the newline. 
+You can also combine this with a count, so pressing 3J will combine 
+all 3 lines together.
 
 
 
