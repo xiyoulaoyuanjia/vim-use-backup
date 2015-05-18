@@ -13,6 +13,8 @@ vim-use
     * [关于VISUAL模式](#command_8)
     * [删除当前光标到行末/开头](#command_9)
     * [删除行末的换行符newline](#command_10)
+    * [把所有行用本地程序打开](#command_11)
+    * 
 
 
    
@@ -146,6 +148,16 @@ join that line and the next line together, removing the newline.
 You can also combine this with a count, so pressing 3J will combine 
 all 3 lines together.
 
+<h4 id="command_11">把所有行用本地程序打开</h4>
+
+这个的应用场景是 在vim中希望16进制打开文件，例如
+已16进制打开当前文档
+
+    :%!xxd 
+
+返回
+
+    :%!xxd -r
 
 
 
@@ -257,7 +269,6 @@ help formatoptions  可得其解释
 
 >* set ignorecase(缩写 set ic?)
 >* /gagag\c   不区分大小写查找 gagag 
-
 
 
 
